@@ -1,0 +1,50 @@
+/*
+  Design tokens: define the small visual system once so colors and spacing can
+  be changed without searching through the rest of the stylesheet.
+*/
+:root {
+  --page-background: #f4f7fb;
+  --card-background: #ffffff;
+  --primary-text: #12263a;
+  --accent: #1677ff;
+  --shadow: 0 16px 40px rgb(18 38 58 / 12%);
+}
+
+/*
+  Remove the browser's default body margin and center the card in the visible
+  viewport. min-height lets the layout remain centered on taller screens.
+*/
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: var(--page-background);
+  color: var(--primary-text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The only visual component in this starter app. */
+.welcome-card {
+  width: min(90%, 42rem);
+  box-sizing: border-box;
+  padding: 3rem;
+  border-top: 0.5rem solid var(--accent);
+  border-radius: 1rem;
+  background: var(--card-background);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+/* Use a responsive size so the heading fits on small screens. */
+h1 {
+  margin: 0;
+  font-size: clamp(2.25rem, 8vw, 4.5rem);
+  line-height: 1.1;
+}
+
+/* Keep the name visually subordinate to the main greeting. */
+p {
+  margin: 1rem 0 0;
+  font-size: clamp(1.125rem, 3vw, 1.5rem);
+}
