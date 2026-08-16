@@ -1,0 +1,7 @@
+# Local Cloudflare development state. This is generated on each machine and
+# must not be committed because it can contain local runtime data.
+.wrangler/
+
+# Operating-system files.
+.DS_Store
+Thumbs.db
